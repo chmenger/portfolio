@@ -6,10 +6,8 @@ O projeto também faz parte do meu processo de aprendizado em desenvolvimento we
 
 🚧 Status do projeto: Em desenvolvimento. Algumas funcionalidades e melhorias visuais ainda estão sendo implementadas.
 
-
      Objetivo
-
-
+     
 Criar um portfólio digital que represente minha identidade como desenvolvedor em formação, reunindo meus projetos, conhecimentos técnicos e experiências acadêmicas em uma interface organizada, interativa e visualmente consistente.
 
 Além de apresentar meus trabalhos, o projeto busca demonstrar minha evolução prática em desenvolvimento web, organização de código e construção de interfaces.
