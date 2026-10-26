@@ -82,7 +82,7 @@ Planejamento, implementação e aprimoramento contínuo de um projeto próprio.
 
 
 
-📌 Status atual
+          📌 Status atual
 
 
 
