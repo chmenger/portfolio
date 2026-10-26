@@ -6,13 +6,17 @@ O projeto também faz parte do meu processo de aprendizado em desenvolvimento we
 
 🚧 Status do projeto: Em desenvolvimento. Algumas funcionalidades e melhorias visuais ainda estão sendo implementadas.
 
-🎯 Objetivo
+
+     Objetivo
+
 
 Criar um portfólio digital que represente minha identidade como desenvolvedor em formação, reunindo meus projetos, conhecimentos técnicos e experiências acadêmicas em uma interface organizada, interativa e visualmente consistente.
 
 Além de apresentar meus trabalhos, o projeto busca demonstrar minha evolução prática em desenvolvimento web, organização de código e construção de interfaces.
 
-🛠️ Tecnologias utilizadas
+
+     Tecnologias utilizadas
+
 
 HTML5: estruturação do conteúdo e das seções do site.
 
@@ -20,7 +24,9 @@ CSS3: estilização, identidade visual, layouts e efeitos de interação.
 
 JavaScript: implementação de funcionalidades e interatividade.
 
-✨ Proposta do projeto
+
+    Proposta do projeto
+
 
 O portfólio está sendo desenvolvido com foco em:
 
@@ -36,7 +42,9 @@ Identidade visual própria, com atenção à tipografia, cores e detalhes de int
 
 Evolução progressiva da experiência do usuário e da responsividade.
 
-🚧 Funcionalidades e melhorias planejadas
+
+     Funcionalidades e melhorias planejadas
+
 
 Como o projeto ainda está em desenvolvimento, algumas etapas precisam ser concluídas ou aprimoradas:
 
@@ -56,7 +64,9 @@ Finalizar a publicação do portfólio para acesso público.
 
 Esta lista representa o planejamento do projeto e será atualizada conforme o desenvolvimento avançar.
 
-📚 Aprendizados
+
+    Aprendizados
+
 
 O desenvolvimento deste projeto proporciona a oportunidade de praticar e aprofundar conhecimentos em:
 
@@ -72,13 +82,18 @@ Organização de arquivos e versionamento com Git e GitHub.
 
 Planejamento, implementação e aprimoramento contínuo de um projeto próprio.
 
+
+
 📌 Status atual
+
+
 
 Este portfólio ainda não representa uma versão final. O projeto está sendo construído gradualmente, com foco no aprendizado, na melhoria do código e na criação de uma apresentação profissional dos meus trabalhos.
 
 Novas funcionalidades, ajustes e melhorias serão adicionados ao longo do desenvolvimento.
 
-👨‍💻 Autor
+
+ Autor
 
 Carlos Henrique Menger Neto
 
