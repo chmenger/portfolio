@@ -9,34 +9,96 @@ html {
 }
 
 section {
-    scroll-margin-top: 95px;
+    scroll-margin-top: 4px;
 }
 
 header {
-    background-color: rgba(0, 32, 211, 0.75);
-    height: 95px;
+    background-color: rgba(217, 231, 18, 0.486);
     color: white;
 
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding-left: 110px;
-
-    padding-bottom: 20px;
-    border-bottom: 5px solid rgb(68, 204, 209); 
-
+    backdrop-filter: blur(1.5px);
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
+    top: 5px;
+    left: 1%;          /* 1% + 98% de largura + 1% = centralizado */
+    margin: 0;         /* apaga o "margin: 0 auto" e o "margin-top" */
+    z-index: 100;
+
+    display: flex;
+    margin: 0 auto;
+    align-items: center;
+    
+    justify-content: space-between;
+
+    width: 98%;
+    height: 80px;
+    border-radius: 50px;
+    padding: 10px 30px;
+    margin-top: 20px;
+
+     border: 1px solid rgba(68, 204, 209, 0.8);
+    border-bottom: 5px solid rgba(9, 199, 233, 0.822);
+    background:
+        linear-gradient(rgba(58, 218, 204, 0.027), rgba(63, 150, 250, 0.521)) padding-box,
+        linear-gradient(to right, #97fafd21, #2d881269) border-box;
+}
+
+body {
+    background-color: rgba(0, 0, 15, 0.514);
+}
+
+.header-logo {
+    width: 130px;
+    height: 50px;
+    align-items: center;
+    
+    justify-content: flex-start;
+    
 }
 
 header nav ul {
     display: flex;
     list-style: none;
-    gap: 200px;
+    gap: 80px;
 
+}
+
+.header-github {
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+    font-size: 15px;
+    gap: 5px;
+    background-color: rgba(104, 197, 169, 0.2);
+    box-shadow: 0px 0px 10px rgba(1, 40, 300, 0.6);
+    display: flex;
+    width: 200px;
+    height: 50px;
+    align-items: center;
+    justify-content: flex-end;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 1px solid rgb(68, 204, 209);
+    
+    justify-content: flex-end;
+    
+}
+
+.header-github:hover {
+    transform: scale(1.08);
+    background-color: rgba(104, 197, 169, 0.3)
+}
+
+.header-github h3 {
+    margin: 0;
+    white-space: nowrap; /* evita o texto quebrar em duas linhas */
+}
+
+.github-logo {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .link {
@@ -50,45 +112,32 @@ header nav ul {
     color: #8edfff
 }
 
-#perfil {
-    height: 100vh;     
-    width: 100%;             
-    background-color: #01000e; 
-
-    border-bottom: 5px solid rgb(71, 188, 255);
-
-    position: relative;
+    #perfil {
+    background-image:
+    linear-gradient(rgba(5, 58, 21, 0.425), rgba(0, 0, 0, 0.295)),
+    url("imagens/FozDoIguacu.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
 }
 
-.banner-header {
-    position: absolute;
 
-    top: 95px;
+.banner-header {
+    
+
+    top: 80px;
     left: 0;
 
     width: 100%;
-    height: 330px;
+    height: 345px;
 
     object-fit: cover;
 
     z-index: 1;
 }
 
-#perfil::before {
-    content: "";
 
-    position: absolute;
-
-    top: 45%;
-    left: 0;
-
-    width: 100%;
-    height: 4px;
-
-    background-color: rgb(59, 133, 245);
-
-    z-index: 3;
-}
 
 #perfil::after {
     content: "";
@@ -146,7 +195,7 @@ header nav ul {
     left: 2%;
 }
 
-#profissao {
+#projetos {
     height: 100vh;
     width: 100%;
     background-color: rgb(7, 7, 87);
@@ -227,22 +276,40 @@ footer {
 
 
 
-
-
-
-/* O :root é um lugar global onde guardamos variáveis */
-:root {
-    --imagem-perfil: url('https://link-da-imagem.com');
-    --imagem-profissao: url('imagens/fundo-profissao.png');
+.titulo-projetos {
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
-#perfil {
-    /* Em vez de colar o link gigante aqui, você puxa a variável pelo nome */
-    background-image: var(--imagem-perfil); 
-    background-size: cover;
-    background-position: center;
+.box-borda-perfil {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    height: 220px;
+    top: 720px;
+    left: 15%;
+    border: 5px solid rgb(68, 204, 209);
+    border-radius: 20px;
 }
 
+.espaco-perfil {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 400px;
+    width: 400px;
+}
+
+quadrado-perfil {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(68, 204, 209);
+    border-radius: 20px;
+}
 #profissao {
     background-image: var(--imagem-profissao);
     background-size: cover;

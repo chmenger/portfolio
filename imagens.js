@@ -1,8 +1,8 @@
 const minhasImagens = {
     perfil: "imagens/perfil-new.jpg",
-    boxDescricao: "imagens/foto-local.jpg",
-    banner: "imagens/banner-header.jpg"
+    logoGithub: "imagens/github.jpg",
 };
 
 document.querySelector("#perfil-new").src = minhasImagens.perfil;
-document.querySelector ("#imagem-banner").src = minhasImagens.banner;
+document.querySelector ("#github").src = minhasImagens.logoGithub;
+
