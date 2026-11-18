@@ -310,3 +310,7 @@ quadrado-perfil {
     background-color: rgb(68, 204, 209);
     border-radius: 20px;
 }
+#profissao {
+    background-image: var(--imagem-profissao);
+    background-size: cover;
+}
