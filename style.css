@@ -1,4 +1,8 @@
-* {
+/*==========================================================================*/
+/*========================== PROPRIEDADES EXTRAS ===========================*/
+/*==========================================================================*/
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,10 +16,25 @@ html, body {
     overflow-x: hidden;
 }
 
+body {
+    background-color: rgba(0, 0, 15, 0.514);
+}
+
 section {
     scroll-margin-top: 4px;
 }
 
+/*==========================================================================*/
+/*==========================================================================*/
+/*==========================================================================*/
+
+
+
+
+
+/*==========================================================================*/
+/*============================== AREA HEADER ===============================*/
+/*==========================================================================*/
 header {
     background-color: rgba(217, 231, 18, 0.486);
     color: white;
@@ -44,10 +63,6 @@ header {
     background:
         linear-gradient(rgba(58, 218, 204, 0.027), rgba(63, 150, 250, 0.521)) padding-box,
         linear-gradient(to right, #97fafd21, #2d881269) border-box;
-}
-
-body {
-    background-color: rgba(0, 0, 15, 0.514);
 }
 
 .header-logo {
@@ -112,30 +127,56 @@ header nav ul {
 }
 
 .link {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 6px;           /* espaço para a linha embaixo */
     font-size: large;
     color: aliceblue;
     text-decoration: none;
     cursor: pointer;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
-.link:hover {
-    color: #d3a016;
-    text-shadow: 0 0 10px rgba(211, 160, 22, 0.6);
+
+.link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: #d3a016;
+    box-shadow: 0 0 8px rgba(211, 160, 22, 0.6);
+    transform: translateX(-50%);   /* o centro da linha fica no centro do texto */
+    transition: width 0.35s ease;
 }
 
-.link:hover::after {
-    width: 100%;
-}
-
-/* Link da seção ativa */
+.link:hover,
 .link.ativo {
     color: #d3a016;
     text-shadow: 0 0 10px rgba(211, 160, 22, 0.6);
 }
 
+.link:hover::after,
 .link.ativo::after {
     width: 100%;
 }
+
+/*==========================================================================*/
+/*==========================================================================*/
+/*==========================================================================*/
+
+
+
+
+/*                   ===================================                    */
+/*            ===================================================           */
+/*=============================             ================================*/
+/*==================             AREA HERO             =====================*/
+/*=============================             ================================*/
+/*            ===================================================           */
+/*                   ===================================                    */
+
 
     #perfil {
     background-image:
@@ -148,25 +189,6 @@ header nav ul {
     position: relative;
     padding-top: 130px;
 }
-
-
-
-
-.banner-header {
-    
-
-    top: 80px;
-    left: 0;
-
-    width: 100%;
-    height: 345px;
-
-    object-fit: cover;
-
-    z-index: 1;
-}
-
-
 
 #perfil::after {
     content: "";
@@ -194,230 +216,9 @@ header nav ul {
 
     z-index: 5;
 }
-
-.circulo {
-    width: 260px;
-    height: 260px;
-
-    border-radius: 50%;
-    background-color: rgb(73, 241, 157);
-    margin: solid 10px rgba(0, 0, 0, 0);
-
-    position: absolute;
-
-    top: 25%;
-    left: 73%;
-
-    z-index: 4;
-}
-
-.circulo::before {
-    content: "";
-
-    position: absolute;
-
-    width: 280px;
-    height: 280px;
-
-    top: -12px;
-    left: -12.5px;
-
-    border: 2px solid #39f1e252;
-    box-shadow: 8px 30px 70px rgba(0, 0, 0, 0.7);
-    border-radius: 50%;
-
-    pointer-events: none;
-}
-
-#perfil-new {
-    width: 250px;
-    height: 250px;
-
-    border-radius: 50%;
-
-    object-fit: cover;
-
-    position: absolute;
-
-    top: 2%;
-    left: 2%;
-}
-
-#projetos {
-    height: 100vh;
-    width: 100%;
-    background-color: rgb(7, 7, 87);
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    gap: 30px;
-    flex-wrap: wrap;
-
-    padding: 120px 50px 50px;
-    border-bottom: 8px solid rgb(68, 204, 209);
-
-}
-
-.box {
-    
-    background-color: rgba(2, 226, 255, 0.932);
-    box-shadow: 20px 40px 30px rgba(0, 0, 0, 0.8);
-    width: 150px;
-    height: 300px;
-    margin-bottom: 110px;
-
-    border-radius: 20px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 20px;
-    transition: all 0.4s ease; 
-} 
-
-.box:hover {
-    width: 200px;
-    height: 350px;
-    background-color: rgb(46, 255, 255);
-}
-.box2 {
-    
-    background-color: rgba(2, 226, 255, 0.932);
-    box-shadow: 5px 45px 30px rgba(0, 0, 0, 0.8);
-    width: 150px;
-    height: 300px;
-    margin-bottom: 110px;
-
-    border-radius: 20px;
-} 
-
-.box2:hover {
-    width: 200px;
-    height: 350px;
-    background-color: rgb(46, 255, 255);
-}
-
-.ver-mais {
-    display: flex;
-    background-color: rgb(19, 0, 189);
-    color: rgb(231, 231, 231);
-    border: none;
-    padding: 10px 20px;
-    border-radius: 20px;
-
-    cursor: pointer;
-    margin-top: auto;
-    height: 30px;
-    width: 100%;
-}
-
-footer {
-    background-color: rgb(6, 2, 32);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 240px; 
-}
-
-
-
-.titulo-projetos {
-    color: rgb(255, 255, 255);
-    font-size: 24px;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.box-borda-perfil {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 320px;
-    height: 220px;
-    top: 720px;
-    left: 15%;
-    border: 5px solid rgb(68, 204, 209);
-    border-radius: 20px;
-}
-
-
-quadrado-perfil {
-    width: 200px;
-    height: 200px;
-    background-color: rgb(68, 204, 209);
-    border-radius: 20px;
-}
-#profissao {
-    background-image: var(--imagem-profissao);
-    background-size: cover;
-}
-.shadow-hero {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-}
-
-.shadow-hero::before {
-    content: "";
-
-    position: absolute;
-    inset: -30px;
-
-    background: linear-gradient(
-        to right,
-        rgb(0, 0, 0),
-        transparent 75%
-    );
-
-    filter: blur(35px);
-}
-
-.projetos-destaque {
-    color: transparent;
-    display: flex;
-    padding-left:  5%;
-    padding-right: 5%;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-top: 80px;
-    height: 300px;
-    
-}
-
-.caixa-sobre {
-display: flex;
-border-radius: 15px;
-width: 400px;
-height: 210px;
-background-color: rgba(0, 0, 0, 0.5);
-
-align-items: center;
-
-}
-
-.caixa-conhecimento {
-display: flex;
-border-radius: 15px;
-width: 400px;
-height: 210px;
-background-color: rgb(0, 0, 0, 0.5);
-
-align-items: center;
-}
-.caixa-experiencia {
-display: flex;
-border-radius: 15px;
-width: 400px;
-height: 210px;
-background-color: rgb(0, 0, 0, 0.5);
-
-align-items: center;
-}
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =*/
+/*=========                    MINHA DESCRIÇÃO                     =========*/
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =*/
 
 .apresentacao {
     position: relative;
@@ -432,12 +233,6 @@ align-items: center;
     gap: 50px;
 
     color: white;
-
-    /*background: rgba(0, 0, 0, 0.35);
-    backdrop-filter: blur(8px);
-
-    border: 1px solid rgba(68, 204, 209, 0.5);
-    border-radius: 20px;*/
 }
 
 .apresentacao h1 {
@@ -453,7 +248,7 @@ align-items: center;
 .nome-destaque {
     color: #d3a016;
     font-size: 45px;
-    margin: 30px;
+    margin-left: 30px;
 }
 
 .sub-descricao {
@@ -511,4 +306,382 @@ align-items: center;
     background-color: transparent;
     color: #d3a016;
     transform: translateY(-3px);
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =*/
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =*/
+
+
+
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =*/
+.perfil-lateral {
+    position: absolute;
+    top: 25%;
+    right: 6%;              /* mais seguro que left: 73% em telas menores */
+    z-index: 4;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;              /* espaço entre o círculo e os botões */
+}
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =*/
+
+
+
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =*/
+/*=========                CIRCULO FOTO DE PERFIL                  =========*/
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =*/
+.circulo {
+    width: 260px;
+    height: 260px;
+
+    border-radius: 50%;
+    background-color: rgb(73, 241, 157);
+    margin: solid 10px rgba(0, 0, 0, 0);
+
+    position: relative;
+    
+
+    z-index: 4;
+}
+
+.circulo::before {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    top: -12px;
+    left: -12.5px;
+
+    border: 2px solid #39f1e252;
+    box-shadow: 8px 30px 70px rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+#perfil-new {
+    width: 250px;
+    height: 250px;
+
+    border-radius: 50%;
+
+    object-fit: cover;
+
+    position: absolute;
+
+    top: 2%;
+    left: 2%;
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =*/
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =*/
+
+
+
+/*==========================================================================*/
+/*==========================================================================*/
+/*==========================================================================*/
+
+
+
+
+
+
+
+/*==========================================================================*/
+/*====================== BOTÕES PARA ESTETICA DO SITE ======================*/
+/*==========================================================================*/
+
+.estetica {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 110px;
+    padding: 10px 16px;
+    border-radius: 40px;
+    background: rgba(0, 0, 0, 0.55);
+    border: 1px solid rgba(68, 204, 209, 0.5);
+}
+
+.estetica-titulo {
+    font-size: 12px;
+    letter-spacing: 1px;
+    color: #8edfff;
+}
+
+.estetica-btn {
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 1px solid #44ccd1;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.estetica-btn:hover { background: rgba(68, 204, 209, 0.2); }
+
+.estetica-btn.ativo {
+    background: #d3a016;
+    border-color: #d3a016;
+    color: #111;
+}
+
+/*==========================================================================*/
+/*==========================================================================*/
+/*==========================================================================*/
+
+
+
+
+
+
+
+/*==========================================================================*/
+/*========================== BOTÃO PARA CONHECER ===========================*/
+/*==========================================================================*/
+
+
+/* container: centraliza o botão sem usar transform (a animação precisa dele) */
+.conheca {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100vh - 100px);        /* sobe/desce o botão aqui */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 6;               /* acima do #perfil::after, que tem z-index 5 */
+    pointer-events: none;     /* só o botão recebe clique */
+}
+
+
+
+.btn-conheca {
+    pointer-events: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+
+    padding: 14px 36px 10px;
+    border-radius: 40px;
+    border: 1px solid rgba(211, 160, 22, 0.8);
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(4px);
+
+    color: #d3a016;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-decoration: none;
+
+    animation: respirar 2.4s ease-in-out infinite;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-conheca:hover {
+    background: #d3a016;
+    color: #111;
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =*/
+/*============              EFEITOS DO BOTAO CONHECER           ============*/
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =*/
+/* ondas que se expandem a partir do botão */
+.btn-conheca::before,
+.btn-conheca::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    border: 2px solid #d3a016;
+    opacity: 0;
+    pointer-events: none;
+    animation: onda 2.4s ease-out infinite;
+}
+
+.btn-conheca::after {
+    animation-delay: 1.2s;    /* a segunda onda sai no meio da primeira */
+}
+
+/* a seta balança para baixo */
+.seta {
+    animation: descer 1.4s ease-in-out infinite;
+}
+
+@keyframes respirar {
+    0%, 100% { box-shadow: 0 0 14px rgba(211, 160, 22, 0.3); }
+    50%      { box-shadow: 0 0 28px rgba(211, 160, 22, 0.75),
+                           0 0 60px rgba(68, 204, 209, 0.35); }
+}
+
+@keyframes onda {
+    0%   { transform: scale(1);        opacity: 0.7; }
+    100% { transform: scale(1.5, 1.9); opacity: 0; }
+}
+
+@keyframes descer {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(6px); }
+}
+
+/* respeita quem desativa animações no sistema */
+@media (prefers-reduced-motion: reduce) {
+    .btn-conheca, .btn-conheca::before, .btn-conheca::after, .seta {
+        animation: none;
+    }
+}
+
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =*/
+/* = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =*/
+
+
+/*==========================================================================*/
+/*==========================================================================*/
+/*==========================================================================*/
+
+
+
+
+
+
+
+/*==========================================================================*/
+/*======================= CAIXAS DE REDIRECIONAMENTO =======================*/
+/*==========================================================================*/
+
+.projetos-destaque {
+    background-color: #44ccd1;
+    color: transparent;
+    display: flex;
+    padding-left:  5%;
+    padding-right: 5%;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    
+}
+
+.caixa-sobre {
+display: flex;
+border-radius: 15px;
+width: 400px;
+height: 210px;
+background-color: rgba(0, 0, 0, 0.5);
+
+align-items: center;
+
+}
+
+.caixa-conhecimento {
+display: flex;
+border-radius: 15px;
+width: 400px;
+height: 210px;
+background-color: rgb(0, 0, 0, 0.5);
+
+align-items: center;
+}
+.caixa-experiencia {
+display: flex;
+border-radius: 15px;
+width: 400px;
+height: 210px;
+background-color: rgb(0, 0, 0, 0.5);
+
+align-items: center;
+}
+
+/*==========================================================================*/
+/*==========================================================================*/
+/*==========================================================================*/
+
+
+
+
+
+
+
+/*==========================================================================*/
+/*========================== EFEITOS E ANIMAÇÕES ===========================*/
+/*==========================================================================*/
+
+
+.shadow-hero::before {
+    content: "";
+
+    position: absolute;
+    inset: -30px;
+
+    background: linear-gradient(
+        to right,
+        rgb(0, 0, 0),
+        transparent 75%
+    );
+
+    filter: blur(35px);
+}
+
+
+
+
+/*==========================================================================*/
+/*==========================================================================*/
+/*==========================================================================*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    background-color: rgb(6, 2, 32);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 240px; 
 }
